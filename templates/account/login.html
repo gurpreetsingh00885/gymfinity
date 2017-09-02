@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Sign-Up/Login Form</title>
+  <title>Login to Gymfinity</title>
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
@@ -19,22 +19,22 @@
 
     <ul>
     <li id="l"><img src='/static/images/logo.png' style='position:relative; top:0; left:0; float: left; float: bottom;' width='80' height='50px'/>Gymfinity</li>
-      <li id="r"><a href="/partner/">Become a Partner</a></li>
+      <li id="r"><a href="/partner/">Get Involved</a></li>
       <li id="r"><a href="/accounts/login" >Login</a></li>
       <li id="r"><a href="/accounts/signup">Register</a></li>
-      <li id="r"><a >About Us</a></li>
+      <li id="r"><a href="/">About</a></li>
     </ul>
   </nav><br><br>
   <div class="login-page">
   <div class="form">
     <form class="login-form">
       {% csrf_token %}
-      {{ form.as_p }}
+      {{ form.as_table }}
       {% if redirect_field_value %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
       {% endif %}
       <button type="submit">login</button>
-      <p class="message">Not registered? <a href="/accounts/signup">Create an account</a></p>
+      <center class="message">Not registered? <a href="/accounts/signup">Create an account</a></center>
     </form>
   </div>
 </div>
