@@ -25,13 +25,13 @@
   <br><br>
  <div class="login-page">
   <div class="form">
-    <form class="login-form">
+    <form class="login-form" action="/accounts/signup/" method="post">
       {% csrf_token %}
       {{ form.as_table }}
   	  {% if redirect_field_value %}
   	  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
 	  {% endif %}
-      <button type="submit">login</button>
+      <input type="submit" value="Create Account">login</input>
       <center class="message">Already registered?<a href="/accounts/login"> Login here</a></center>
     </form>
   </div>
