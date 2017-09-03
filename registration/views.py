@@ -59,3 +59,8 @@ class FindGymView(View):
 			"gyms": gyms_found,
 		}
 		return render(request, "gyms_found.html", context)
+
+class LandingView(View):
+
+	def get(self, request, *args, **kwargs):
+		return render(request, "dash.html", {})
