@@ -11,6 +11,12 @@ class AddGymForm(forms.ModelForm):
             'location': GooglePointFieldWidget,
         }
 
+    def __init__(self, *args, **kwargs):
+        super(AddGymForm, self).__init__(*args, **kwargs)
+
+        self.fields["name"].widget.attrs['placeholder'] = "Gym's Name"
+        self.fields["contact_no"].widget.attrs['placeholder'] = "Contact No."
+
 class FindGymForm(forms.ModelForm):
 
     class Meta:
