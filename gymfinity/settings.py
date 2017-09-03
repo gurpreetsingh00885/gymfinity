@@ -22,10 +22,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'registration',
     'gymfinder',
-
     'mapwidgets',
 ]
 
@@ -93,10 +95,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+SITE_ID = 1
+
 MAP_WIDGETS = {
     "GooglePointFieldWidget": (
-        ("zoom", 2),
-        ("mapCenterLocationName", "turkey"),
+        ("zoom", 17),
+        ("mapCenterLocationName", "India"),
         ("markerFitZoom", 12),
     ),
     "GOOGLE_MAP_API_KEY": "AIzaSyDr8UsImdxghHUfe_YI4KdnCr6Kqg9cXIU"
@@ -105,3 +109,9 @@ MAP_WIDGETS = {
 SPATIALITE_LIBRARY_PATH = 'mod_spatialite'
 
 ZOOM = 100
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "optional"
+ACCOUNT_AUTHENTICATION_METHOD = "username"
+ACCOUNT_USERNAME_REQUIRED = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
