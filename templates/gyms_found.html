@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{gyms_found}} Gyms Found</title>
+</head>
+<body>
+<h2>{{gyms_found}} Gyms were found within {{max_distance}} Km from your location.</h2>
+
+<table border="1" cellspacing="0px" cellpadding="10px">
+
+{% for gym in gyms %}
+<tr><td><b>{{gym.0.name}}</b></td><td>({{gym.1}} Km away)</td></tr>
+{% endfor %}
+
+
+</table>
+</body>
+</html>

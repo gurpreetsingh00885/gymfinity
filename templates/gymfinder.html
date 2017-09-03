@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gymfinity: Find a Gym</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	{{ form.media }}
+</head>
+<body>
+<h2> Find Nearby Gyms </h2>
+	<form action="/find/" method="post">
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" value="Find Nearby Gyms"/>
+	</form>
+
+</body>
+</html>
