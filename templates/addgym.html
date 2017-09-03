@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
-	<title>Gymfinity: Become a Partner!</title>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	{{ form.media }}
+  <meta charset="UTF-8">
+  <title>Gymfinity: Become a Partner</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+      <link rel="stylesheet" href="/static/css/gym.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  {{form.media}}
 </head>
+
 <body>
-	<h2>Add a Gym to become a Partner</h2>
-	<form action="/partner/" method="post">
+<nav id="nav">
+    <ul>
+    <li id="l"><img src='/static/images/logo.png' style='position:relative; top:0; left:0; float: left; float: bottom;' width='80' height='50px'/>Gymfinity</li>
+      <li id="r"><a href="/partner/">Become a Partner</a></li>
+      <li id="r"><a href="/accounts/login" >Login</a></li>
+      <li id="r"><a href="/accounts/signup">Register</a></li>
+      <li id="r"><a>About Us</a></li>
+       </ul>
+  </nav>
+
+
+  <form action="/partner/" method="post">
 	{% csrf_token %}
 	{{form.as_p}}
 
 	<input type="submit" value="Add Gym"/>
 	</form>
+    <script src="/static/js/index.js"></script>
+
 </body>
 </html>
