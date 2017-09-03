@@ -16,6 +16,9 @@
 #section4 {
   background-color: #5677fc;
 }
+#id_remember{
+  display: none;
+}
 /* MIXINS
    ================================================================== */
 /* KEYFRAMES
@@ -175,4 +178,9 @@ section h2 {
   -webkit-animation: float-in-left 0.45s ease;
   animation: float-in-left 0.45s ease;
 }
+
+label{
+  display: none;
+}
 /* BASE
+
