@@ -27,7 +27,7 @@
   </nav><br><br>
   <div class="login-page">
   <div class="form">
-    <form class="login-form">
+    <form class="login-form" action="/accounts/login/" method="post">
       {% csrf_token %}
       {{ form.as_table }}
       {% if redirect_field_value %}
