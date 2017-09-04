@@ -6,7 +6,7 @@ SECRET_KEY = 'zpn_r-jnnr-j$bgqk5hox@=a5d(ctko_d09c4t-)+vdj8wn3r='
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'registration',
     'gymfinder',
     'mapwidgets',
+    'star_ratings',
 ]
 
 MIDDLEWARE = [

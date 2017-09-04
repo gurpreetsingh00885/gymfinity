@@ -1,9 +1,12 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from registration.views import HomeView, AddGymView, FindGymView
+from registration.views import HomeView, AddGymView, FindGymView, LandingView, GymDetailView
 
 urlpatterns = [
+	url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
+	url(r'^gymdetail/(?P<pk>[-\w]+)$', GymDetailView.as_view()),
+	url(r'^accounts/profile', LandingView.as_view()),
 	url(r'^accounts/', include('allauth.urls')),
 	url(r'^find/', FindGymView.as_view()),
 	url(r'^partner/', AddGymView.as_view()),

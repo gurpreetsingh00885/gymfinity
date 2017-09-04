@@ -6,7 +6,7 @@ class AddGymForm(forms.ModelForm):
 
     class Meta:
         model = Gym
-        fields = ("name", "location")
+        fields = ("name", "contact_no" ,"location",)
         widgets = {
             'location': GooglePointFieldWidget,
         }
