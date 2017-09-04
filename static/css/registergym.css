@@ -10,7 +10,7 @@ body {
   line-height: 2.35;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
-  background-color: #009688;
+  background-color: #5677fc;;
 }
 label{
   display: none;
@@ -37,7 +37,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background: #009688;
+  background: #5677fc;
   -webkit-transition: all 650ms cubic-bezier(0.22, 1, 0.25, 1);
   transition: all 650ms cubic-bezier(0.22, 1, 0.25, 1);
 }
@@ -100,7 +100,7 @@ img{
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  background: #fcffa7;
+  background: #c8d2fc;
   width: 100%;
   border: 0;
   margin: 0 0 15px;
@@ -112,7 +112,7 @@ img{
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background:  #009688;
+  background:  #5677fc;
   width: 100%;
   border: 0;
   border-radius: 4px;
@@ -127,7 +127,6 @@ img{
   background: #d34836;
 }
 .form .message {
-  margin: 15px 0 0;
   color: #6d6d69;
   font-size: 15px;
 }
