@@ -13,6 +13,10 @@ class HomeView(View):
 	def get(self, request, *args, **kwargs):
 		return render(request, "home.html", {})
 
+class UserDetailView(View):
+
+	def get(self, request, *args, **kwargs):
+		return render(request, "user.html", {})
 
 class AddGymView(View):
 
@@ -80,3 +84,8 @@ class GymDetailView(View):
 		"location":location
 		}
 		return render(request, "gymdetail.html", context)
+
+class SubscribeView(View):
+
+	def get(self, request, *args, **kwargs):
+		return render(request, "sub.html", {})

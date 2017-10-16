@@ -6,6 +6,23 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>Gymfinity: Find a Gym</title>
+    <style>
+        input[type="submit"] {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background:  #1ebfc6;
+  width: 30%;
+  border: 0;
+  border-radius: 4px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+    </style>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	{{ form.media }}
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -43,7 +60,7 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="" class="simple-text">
-									<img src='logo.png' style='position:absolute; top:0; left:0;' width='80px' height='50px' alt='' />
+									<img src='/static/images/logo.png' style='position:absolute; top:0; left:0;' width='80px' height='50px' alt='' />
                     Gymfinity
                 </a>
             </div>
@@ -70,7 +87,7 @@
                 </li>
 
                 <li >
-                    <a href="sub.html">
+                    <a href="/subscribe">
                         <i class="pe-7s-cash"></i>
                         <p>Subscription</p>
                     </a>
